@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Doctors - Meryl Hospital</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <h1 class="sidebar-heading">MERYL HOSPITAL</h1>
+                    <ul class="sidemenu">
+                        <li><a href="{{ url_for('index') }}"><i data-feather="airplay"></i> Dashboard</a></li>
+                        <li><a href="{{ url_for('appointments') }}"><i data-feather="calendar"></i> Appointments</a></li>
+                        <li><a href="{{ url_for('patients') }}"><i data-feather="user"></i> Patients</a></li>
+                        <li><a href="{{ url_for('departments') }}"><i data-feather="grid"></i> Departments</a></li>
+                        <li><a href="{{ url_for('doctors') }}"><i data-feather="users"></i> Doctors</a></li>
+                        <li><a href="{{ url_for('ambulance') }}"><i data-feather="truck"></i> Ambulance Service</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Doctors</h1>
+                </div>
+
+                <!-- Doctors List -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                Doctors List
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <strong>Dr. Walter White</strong> - (MBBS, MD)
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Dr. Saul Goodman</strong> - (MBBS, MD)
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Dr. Gustavo Fring</strong> - (BDS, NDS)
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Dr. Jesse Pinkman</strong> - (BHMS)
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Dr. Mike</strong> - (MBBS, MS)
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Dr. Lalo Salamanca</strong> - (MBBS, MS)
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
